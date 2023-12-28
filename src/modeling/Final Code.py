@@ -17,7 +17,7 @@ from statsmodels.tsa.stattools import adfuller
 file_path = 'Adidas US Sales Datasets.xlsx'
 df = pd.read_excel(file_path)
 df.drop(columns=['Unnamed: 0'], inplace=True)  # Drop irrelevant columns
-df = df.dropna()  # Remove rows with missing values
+df = df.dropna()  # Remove rows with missing values 
 
 # Function to remove outliers
 def remove_outliers(df, y_col, method='IQR', bounds=(0.01, 0.99)):
