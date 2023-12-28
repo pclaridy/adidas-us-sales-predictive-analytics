@@ -14,8 +14,7 @@ from statsmodels.tsa.statespace.sarimax import SARIMAX
 from statsmodels.tsa.stattools import adfuller
 
 # Load and preprocess dataset
-file_path = 'Adidas US Sales Datasets.xlsx'
-df = pd.read_excel(file_path)
+df = pd.read_excel("../../data/raw/Adidas US Sales Datasets.xlsx")
 df.drop(columns=['Unnamed: 0'], inplace=True)  # Drop irrelevant columns
 df = df.dropna()  # Remove rows with missing values 
 
@@ -97,6 +96,7 @@ plt.title('Total Sales by Product')
 plt.ylabel('Total Sales')
 plt.xlabel('Product')
 plt.xticks(rotation=15)
+plt.savefig('../../figures/Total Sales by Product.png')
 plt.show()
 
 # Convert 'Invoice Date' to datetime format and set it as the index for df_filtered
@@ -110,6 +110,7 @@ monthly_sales.plot()
 plt.title('Monthly Total Sales Over Time')
 plt.ylabel('Total Sales')
 plt.xlabel('Date')
+plt.savefig('../../figures/Monthly Total Sales Over Time.png')
 plt.show()
 
 
@@ -119,6 +120,7 @@ plt.figure(figsize=(8, 8))
 region_sales.plot(kind='pie', autopct='%1.1f%%')
 plt.title('Sales Distribution by Region')
 plt.ylabel('')
+plt.savefig('../../figures/Sales Distribution by Region.png')
 plt.show()
 
 # Visualization 4: Scatter Plot of Operating Profit vs. Total Sales
@@ -127,6 +129,7 @@ plt.scatter(df_filtered['Total Sales'], df_filtered['Operating Profit'])
 plt.title('Operating Profit vs. Total Sales')
 plt.xlabel('Total Sales')
 plt.ylabel('Operating Profit')
+plt.savefig('../../figures/Operating Profit vs. Total Sales.png')
 plt.show()
 
 # Boxplot for Prices per Unit by Product
@@ -137,6 +140,7 @@ plt.ylabel('Price per Unit')
 plt.xlabel('Product')
 plt.xticks(ha='right')  # Align the x-ticks (product names) to the right for better readability
 plt.tight_layout()  # Automatically adjust subplot params for the subplot(s) to fit in the figure area
+plt.savefig('../../figures/Price per Unit by Product.png')
 plt.show()
 
 # Visualization 6: Histogram of Units Sold
@@ -145,6 +149,7 @@ df_filtered['Units Sold'].hist(bins=30)
 plt.title('Distribution of Units Sold')
 plt.xlabel('Units Sold')
 plt.ylabel('Frequency')
+plt.savefig('../../figures/Distribution of Units Sold.png')
 plt.show()
 
 # Time Series Analysis - Augmented Dickey-Fuller test
@@ -193,6 +198,7 @@ plt.title('Sales Forecast with SARIMAX')
 plt.xlabel('Date')
 plt.ylabel('Total Sales')
 plt.legend()
+plt.savefig('../../figures/Sales Forecast with SARIMAX.png')
 plt.show()
 
 summary_stats = df_filtered.describe(include=[np.number])
@@ -250,8 +256,6 @@ df_price['Price per Unit'] = df_price['Price per Unit'].apply(lambda x: f"${x:.2
 
 print(df_price)
 
-
-
 forecast_summary = pd.DataFrame({
     'Forecast Period': forecast_index,
     'Forecasted Sales': forecast.predicted_mean,
@@ -275,6 +279,7 @@ plt.xlabel("Time Period")
 plt.yticks(rotation=0)  # Ensure y-axis labels are horizontal
 plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
 plt.tight_layout()  # Adjust layout
+plt.savefig('../../figures/Sales Heatmap by Product Over Time.png')
 plt.show()
 
 
@@ -291,6 +296,7 @@ plt.xlabel("Region")
 plt.yticks(rotation=0)  # Ensure y-axis labels are horizontal
 plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
 plt.tight_layout()  # Adjust layout
+plt.savefig('../../figures/Price per Unit Heatmap by Product and Region.png')
 plt.show()
 
 
@@ -306,6 +312,7 @@ plt.xlabel("Region")
 plt.yticks(rotation=0)  # Ensure y-axis labels are horizontal
 plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
 plt.tight_layout()  # Adjust layout
+plt.savefig('../../figures/Units Sold Heatmap by Product and Region.png')
 plt.show()
 
 
@@ -319,6 +326,7 @@ plt.xlabel("Region")
 plt.yticks(rotation=0)  # Ensure y-axis labels are horizontal
 plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
 plt.tight_layout()  # Adjust layout
+plt.savefig('../../figures/Total Sales by Product and Region.png')
 plt.show()
 
 
