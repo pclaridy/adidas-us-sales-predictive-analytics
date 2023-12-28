@@ -15,7 +15,7 @@ This project's key aspects include:
 
 ## Data Source
 
-The project uses a detailed dataset from Kaggle, encompassing extensive data on Adidas's product sales, including variables like total sales, units sold, prices, and operating profits, specifically focusing on the U.S. market.
+The project uses a detailed dataset from  [Kaggle](https://www.kaggle.com/datasets/heemalichaudhari/adidas-sales-dataset), encompassing extensive data on Adidas's product sales, including variables like total sales, units sold, prices, and operating profits, specifically focusing on the U.S. market.
 
 ## Table of Contents
 
