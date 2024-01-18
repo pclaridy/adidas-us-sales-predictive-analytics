@@ -68,11 +68,11 @@ The project uses a suite of visualizations to present the data analysis and find
 
 *Sales Distribution by Region*: This visualization showcases the regional sales distribution, highlighting market penetration and regional market share.
 
-![Total Sales by Product and Region](https://github.com/pclaridy/adidas-us-sales-predictive-analytics/tree/main/figures/Total%20Sales%20by%20Product%20and%20Region.png)
+![Total Sales by Product and Region](https://github.com/pclaridy/adidas-us-sales-predictive-analytics/blob/main/figures/Total%20Sales%20by%20Product%20and%20Region.png)
 
 *Total Sales by Product and Region*: A comprehensive view of how different products perform across various regions.
 
-![Units Sold Heatmap by Product](https://github.com/pclaridy/adidas-us-sales-predictive-analytics/tree/main/figures/Units%20Sold%20Heatmap%20by%20Product.png)
+![Units Sold Heatmap by Product](https://github.com/pclaridy/adidas-us-sales-predictive-analytics/blob/main/figures/Units%20Sold%20Heatmap%20by%20Product%20and%20Region.png)
 
 *Units Sold Heatmap by Product*: Heatmaps like this one are used to represent the volume of units sold across different product lines.
 
