@@ -64,7 +64,7 @@ Model evaluation details:
 
 The project uses a suite of visualizations to present the data analysis and findings:
 
-![Sales Distribution by Region](https://github.com/pclaridy/adidas-us-sales-predictive-analytics/tree/main/figures/Sales%20Distribution%20by%20Region.png)
+![Sales Distribution by Region](https://github.com/pclaridy/adidas-us-sales-predictive-analytics/blob/main/figures/Sales%20Distribution%20by%20Region.png)
 
 *Sales Distribution by Region*: This visualization showcases the regional sales distribution, highlighting market penetration and regional market share.
 
